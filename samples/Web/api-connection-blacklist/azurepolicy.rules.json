@@ -1,0 +1,17 @@
+{
+	"if": {
+		"allOf": [
+			{
+				"field": "type",
+				"equals": "Microsoft.Web/connections"
+			},
+			{
+				"field": "name",
+				"in": "[parameters('connectionNames')]"
+			}
+		]
+	},
+	"then": {
+		"effect": "deny"
+	}
+}
